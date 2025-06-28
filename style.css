@@ -18,8 +18,12 @@ body { background: white; overflow-x: hidden; font-family: 'Sometype Mono', mono
 .list-right { left: 775px; }
 .list-left { left: 155px; }
 .item { display: flex; align-items: center; gap: 20px; padding: 10px; border-radius: 5px; }
-.icon-wrapper { position: relative; width: 30px; height: 30px; }
 .icon-dot { position: absolute; outline: 2px solid #333; outline-offset: -1px; }
 .icon-square { position: absolute; background: #333; }
 .icon-line { position: absolute; outline: 1px solid #000; outline-offset: -0.5px; }
 .item-text { font-size: 22px; font-weight: 500; color: #333; }
+.icon-wrapper {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
