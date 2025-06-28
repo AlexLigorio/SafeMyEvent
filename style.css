@@ -1,0 +1,25 @@
+/* style.css for SaveMyEvent Landing */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Sometype+Mono:wght@500&display=swap');
+
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: white; overflow-x: hidden; font-family: 'Sometype Mono', monospace; }
+.container { width: 1440px; height: 1162px; position: relative; margin: auto; }
+.hero-image { width: 890px; height: 520px; position: absolute; top: 0; left: 275px; background: #F2F2F2; border-left: 1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666; }
+.btn { position: absolute; padding: 10px 20px; background: #fff; border-radius: 5px; outline: 1px solid #666; outline-offset: -1px; display: inline-flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #333; }
+.btn-artist { top: 429px; left: 524px; }
+.btn-company { top: 429px; left: 770px; }
+.logo { position: absolute; top: 50px; left: 50px; font-size: 22px; font-weight: 500; color: #333; }
+.headline { position: absolute; top: 200px; left: 480px; width: 480px; text-align: center; font-size: 36px; font-weight: 500; color: #333; line-height: 1.2; }
+.subhead { position: absolute; top: 570px; left: 606px; width: 280px; text-align: center; font-size: 28px; font-weight: 500; color: #666; }
+.list-col { position: absolute; top: 654px; width: 511px; display: flex; flex-direction: column; gap: 50px; }
+.list-right { left: 775px; }
+.list-left { left: 155px; }
+.item { display: flex; align-items: center; gap: 20px; padding: 10px; border-radius: 5px; }
+.icon-wrapper { position: relative; width: 30px; height: 30px; }
+.icon-dot { position: absolute; outline: 2px solid #333; outline-offset: -1px; }
+.icon-square { position: absolute; background: #333; }
+.icon-line { position: absolute; outline: 1px solid #000; outline-offset: -0.5px; }
+.item-text { font-size: 22px; font-weight: 500; color: #333; }
