@@ -1,18 +1,42 @@
+/* globals.css */
+
+/* Reset minimal (Meyer Reset) */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
+
+/* Smooth fonts and box sizing */
+*, *::before, *::after {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-html,
-body {
-  margin: 0px;
+
+html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
+  background-color: #fff;
+  color: var(--gris-oscuro);
 }
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
 }
+
+/* Link base style */
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+/* Image and media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utility helpers */
+.hidden {
+  display: none !important;
 }
