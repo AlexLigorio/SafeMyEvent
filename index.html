@@ -1,177 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SaveMyEvent – The Show Must Go ON!</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?
-    family=IBM+Plex+Mono:wght@400&
-    family=Sometype+Mono:wght@500;700&
-    display=swap" rel="stylesheet"
-  />
-
-  <!-- Estilos -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Sometype+Mono:wght@500;700&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Sometype Mono', monospace; background: white; overflow: hidden; }
-    .container {
-      position: relative;
-      width: 1440px; height: 1284px;
-      margin: 0 auto; background: white;
-    }
-    .logo {
-      position: absolute; top: 50px; left: 50px;
-      font-size: 22px; font-weight: 500; color: #666;
-    }
-    .subhead-main {
-      position: absolute; top: 76px; left: 436px;
-      width: 568px; font-size: 28px; font-weight: 500;
-      color: #666; text-align: center;
-    }
-    .headline {
-      position: absolute; top: 198px; left: 330px;
-      width: 780px; font-size: 64px; font-weight: 700;
-      color: #333; text-align: center;
-    }
-    .btn {
-      position: absolute; padding: 10px 20px;
-      border-radius: 5px; outline: 1px solid #333; outline-offset: -1px;
-      display: inline-flex; align-items: center; justify-content: center;
-      cursor: pointer;
-    }
-    .btn-artist { top: 351px; left: 524px; background: white; }
-    .btn-company { top: 351px; left: 770px; background: #333; }
-    .btn-text {
-      font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #333;
-    }
-    .btn-text--light { color: #F2F2F2; }
-
-    .steps-section {
-      position: absolute; top: 474px; left: 0;
-      width: 1440px; background: #F2F2F2;
-      display: inline-flex; justify-content: center; align-items: flex-start;
-      gap: 200px; padding: 20px 0;
-    }
-    .steps-column {
-      display: flex; flex-direction: column; gap: 100px;
-    }
-    .step {
-      display: flex; flex-direction: column; width: 491px; gap: 20px;
-    }
-    .step-head {
-      display: inline-flex; align-items: center; gap: 20px; padding: 10px;
-    }
-    .icon { width: 30px; height: 30px; }
-    .step-title {
-      font-size: 22px; font-weight: 500; color: #333;
-    }
-    .step-desc {
-      font-size: 16px; color: #666; line-height: 1.4;
-      font-family: 'IBM Plex Mono', monospace;
-    }
-
-    .subhead-secondary {
-      position: absolute; top: 1182px; left: 268px;
-      width: 904px; font-size: 22px; font-weight: 500;
-      color: #666; text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <!-- Logo y encabezados -->
-    <div class="logo">SaveMyEvent</div>
-    <div class="subhead-main">
-      ¿Te falló el artista a última hora?<br/>
-      Encuentra un sustituto en minutos.
-    </div>
-    <div class="headline">The Show Must Go ON !</div>
-
-    <!-- Botones -->
-    <div class="btn btn-artist">
-      <span class="btn-text">Soy artista</span>
-    </div>
-    <div class="btn btn-company">
-      <span class="btn-text btn-text--light">Soy empresa</span>
-    </div>
-
-    <!-- Sección de pasos -->
-    <div class="steps-section">
-      <!-- Columna izquierda -->
-      <div class="steps-column">
-        <div class="step">
-          <div class="step-head">
-            <img src="assets/icon-activa.svg" alt="" class="icon"/>
-            <span class="step-title">Actívate</span>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="div">
+        <div class="botones">
+          <div class="frame"><div class="text-wrapper">Regístrate cómo..</div></div>
+          <div class="frame-2">
+            <div class="boton-soy-artista"><div class="text-wrapper-2">Soy artista</div></div>
+            <div class="boton-soy-empresa"><div class="text-wrapper-3">Soy empresa</div></div>
           </div>
-          <p class="step-desc">
-            Cuando tengas disponibilidad, actívate para aparecer en las búsquedas durante 1 hora
-          </p>
         </div>
-        <div class="step">
-          <div class="step-head">
-            <img src="assets/icon-solicitudes.svg" alt="" class="icon"/>
-            <span class="step-title">Recibe solicitudes</span>
+        <div class="text-wrapper-4">SaveMyEvent</div>
+        <p class="p">The Show Must Go ON !</p>
+        <p class="savemyevent-conecta">
+          SaveMyEvent conecta a empresas con artistas disponibles en tiempo real.<br />
+          Para que tu evento no se cancele, y el show continúe.
+        </p>
+        <p class="te-fall-el-artista-a">¿Te falló el artista a última hora?<br />Encuentra un sustituto en minutos.</p>
+        <div class="cmo">
+          <div class="artista">
+            <div class="div-2">
+              <div class="frame-3">
+                <img class="img" src="img/material-symbols-light-check-box-rounded.svg" />
+                <div class="text-wrapper-5">Actívate</div>
+              </div>
+              <div class="div-wrapper">
+                <p class="text-wrapper-6">
+                  Cuando tengas disponibilidad, actívate para<br />aparecer en las búsquedas durante 1 hora
+                </p>
+              </div>
+            </div>
+            <div class="div-2">
+              <div class="frame-3">
+                <div class="img"><img class="group" src="img/group.png" /></div>
+                <div class="text-wrapper-5">Recibe solicitudes</div>
+              </div>
+              <div class="div-wrapper">
+                <p class="text-wrapper-6">
+                  Las empresas podrán contactarte directamente si<br />están interesadas en tu perfil
+                </p>
+              </div>
+            </div>
+            <div class="div-2">
+              <div class="frame-3">
+                <img class="img" src="img/mage-stars-c-fill.svg" />
+                <div class="text-wrapper-5">Gana visibilidad y reputación</div>
+              </div>
+              <div class="div-wrapper">
+                <p class="text-wrapper-6">
+                  Recibe valoraciones positivas tras actuar para<br />destacar sobre otros perfiles.
+                </p>
+              </div>
+            </div>
           </div>
-          <p class="step-desc">
-            Las empresas podrán contactarte directamente si están interesadas en tu perfil
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-head">
-            <img src="assets/icon-reputacion.svg" alt="" class="icon"/>
-            <span class="step-title">Gana visibilidad y reputación</span>
+          <div class="empresa">
+            <div class="div-3">
+              <div class="frame-3">
+                <img class="img" src="img/tdesign-search-filled.svg" />
+                <div class="text-wrapper-5">Encuentra artistas disponibles</div>
+              </div>
+              <div class="frame-4">
+                <p class="text-wrapper-6">
+                  Accede a un listado de artistas que están activos<br />ahora mismo y disponibles para actuar
+                </p>
+              </div>
+            </div>
+            <div class="filtra">
+              <img class="frame-5" src="img/frame-1.png" />
+              <div class="busca-artistas-por-wrapper">
+                <p class="text-wrapper-6">
+                  Busca artistas por tipo de arte, ciudad,<br />presupuesto o valoración para encontrar el mejor<br />encaje
+                </p>
+              </div>
+            </div>
+            <div class="div-3">
+              <div class="frame-3">
+                <img class="img" src="img/ph-chat-fill.svg" />
+                <div class="text-wrapper-5">Contacta al instante</div>
+              </div>
+              <div class="frame-4">
+                <p class="text-wrapper-6">
+                  Envía una solicitud directa a los artistas<br />disponibles y habla con ellos por el chat interno
+                </p>
+              </div>
+            </div>
           </div>
-          <p class="step-desc">
-            Las empresas podrán contactarte directamente si están interesadas en tu perfil
-          </p>
-        </div>
-      </div>
-
-      <!-- Columna derecha -->
-      <div class="steps-column">
-        <div class="step">
-          <div class="step-head">
-            <img src="assets/icon-encuentra.svg" alt="" class="icon"/>
-            <span class="step-title">Encuentra artistas disponibles</span>
-          </div>
-          <p class="step-desc">
-            Accede a un listado de artistas que están activos ahora mismo y disponibles para actuar
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-head">
-            <img src="assets/icon-filtra.svg" alt="" class="icon"/>
-            <span class="step-title">Filtra según tus necesidades</span>
-          </div>
-          <p class="step-desc">
-            Busca artistas por tipo de arte, ciudad, presupuesto o valoración para encontrar el mejor encaje
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-head">
-            <img src="assets/icon-contacta.svg" alt="" class="icon"/>
-            <span class="step-title">Contacta al instante</span>
-          </div>
-          <p class="step-desc">
-            Envía una solicitud directa a los artistas disponibles y habla con ellos por el chat interno
-          </p>
         </div>
       </div>
     </div>
-
-    <!-- Pie de página -->
-    <div class="subhead-secondary">
-      SaveMyEvent conecta a empresas con artistas disponibles en tiempo real.<br/>
-      Para que tu evento no se cancele, y el show continúe.
-    </div>
-  </div>
-</body>
+  </body>
 </html>
-
