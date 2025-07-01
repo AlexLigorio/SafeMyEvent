@@ -27,3 +27,323 @@ body { background: white; overflow-x: hidden; font-family: 'Sometype Mono', mono
   width: 30px;
   height: 30px;
 }
+
+.desktop {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .div {
+  background-color: var(--blanco);
+  width: 1440px;
+  height: 1878px;
+  position: relative;
+}
+
+.desktop .botones {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 526px;
+  left: 524px;
+}
+
+.desktop .frame {
+  display: flex;
+  flex-direction: column;
+  width: 237px;
+  height: 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.desktop .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--cuerpo-de-texto-font-family);
+  font-weight: var(--cuerpo-de-texto-font-weight);
+  color: var(--gris-medio);
+  font-size: var(--cuerpo-de-texto-font-size);
+  text-align: center;
+  letter-spacing: var(--cuerpo-de-texto-letter-spacing);
+  line-height: var(--cuerpo-de-texto-line-height);
+  font-style: var(--cuerpo-de-texto-font-style);
+}
+
+.desktop .frame-2 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 100px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .boton-soy-artista {
+  background-color: var(--blanco);
+  border-color: var(--gris-oscuro);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.desktop .text-wrapper-2 {
+  color: var(--gris-oscuro);
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--cuerpo-de-texto-font-family);
+  font-weight: var(--cuerpo-de-texto-font-weight);
+  font-size: var(--cuerpo-de-texto-font-size);
+  letter-spacing: var(--cuerpo-de-texto-letter-spacing);
+  line-height: var(--cuerpo-de-texto-line-height);
+  font-style: var(--cuerpo-de-texto-font-style);
+}
+
+.desktop .boton-soy-empresa {
+  background-color: var(--gris-oscuro);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: var(--gris-oscuro);
+}
+
+.desktop .text-wrapper-3 {
+  color: var(--gris-muy-claro);
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--cuerpo-de-texto-font-family);
+  font-weight: var(--cuerpo-de-texto-font-weight);
+  font-size: var(--cuerpo-de-texto-font-size);
+  letter-spacing: var(--cuerpo-de-texto-letter-spacing);
+  line-height: var(--cuerpo-de-texto-line-height);
+  font-style: var(--cuerpo-de-texto-font-style);
+}
+
+.desktop .text-wrapper-4 {
+  position: absolute;
+  top: 49px;
+  left: 50px;
+  font-family: var(--encabezado-h3-font-family);
+  font-weight: var(--encabezado-h3-font-weight);
+  color: var(--gris-medio);
+  font-size: var(--encabezado-h3-font-size);
+  letter-spacing: var(--encabezado-h3-letter-spacing);
+  line-height: var(--encabezado-h3-line-height);
+  white-space: nowrap;
+  font-style: var(--encabezado-h3-font-style);
+}
+
+.desktop .p {
+  position: absolute;
+  top: 321px;
+  left: 337px;
+  text-shadow: 0px 2px 4px #00000040;
+  font-family: "Lexend-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--gris-oscuro);
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .savemyevent-conecta {
+  position: absolute;
+  top: 1518px;
+  left: 279px;
+  font-family: var(--encabezado-h3-font-family);
+  font-weight: var(--encabezado-h3-font-weight);
+  color: var(--gris-medio);
+  font-size: var(--encabezado-h3-font-size);
+  text-align: center;
+  letter-spacing: var(--encabezado-h3-letter-spacing);
+  line-height: var(--encabezado-h3-line-height);
+  font-style: var(--encabezado-h3-font-style);
+}
+
+.desktop .te-fall-el-artista-a {
+  position: absolute;
+  top: 125px;
+  left: 436px;
+  font-family: "Sometype Mono-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--gris-medio);
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .cmo {
+  display: flex;
+  width: 1440px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 200px;
+  padding: 50px 0px;
+  position: absolute;
+  top: 723px;
+  left: 0;
+  background-color: var(--gris-muy-claro);
+}
+
+.desktop .artista {
+  display: inline-flex;
+  gap: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .div-2 {
+  display: flex;
+  width: 491px;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .frame-3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.desktop .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  font-family: var(--encabezado-h3-font-family);
+  font-weight: var(--encabezado-h3-font-weight);
+  color: var(--gris-oscuro);
+  font-size: var(--encabezado-h3-font-size);
+  letter-spacing: var(--encabezado-h3-letter-spacing);
+  line-height: var(--encabezado-h3-line-height);
+  white-space: nowrap;
+  font-style: var(--encabezado-h3-font-style);
+}
+
+.desktop .div-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--cuerpo-de-texto-font-family);
+  font-weight: var(--cuerpo-de-texto-font-weight);
+  color: var(--gris-medio);
+  font-size: var(--cuerpo-de-texto-font-size);
+  letter-spacing: var(--cuerpo-de-texto-letter-spacing);
+  line-height: var(--cuerpo-de-texto-line-height);
+  font-style: var(--cuerpo-de-texto-font-style);
+}
+
+.desktop .group {
+  position: absolute;
+  width: 27px;
+  height: 22px;
+  top: 3px;
+  left: 2px;
+}
+
+.desktop .empresa {
+  width: 491px;
+  align-items: center;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.desktop .div-3 {
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.desktop .frame-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.desktop .filtra {
+  display: flex;
+  flex-direction: column;
+  width: 491px;
+  height: 132px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.desktop .frame-5 {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.desktop .busca-artistas-por-wrapper {
+  margin-bottom: -21.00px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
