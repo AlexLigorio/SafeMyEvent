@@ -1,56 +1,70 @@
-/* style.css optimizado para SaveMyEvent Landing */
-
-/* Import Google Fonts */
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Sometype+Mono:wght@500&display=swap');
 
-/* Reset & Base */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Sometype Mono', monospace;
-  background: #fff;
-  overflow-x: hidden;
+/* Contenedor centrado y fluido */
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* Layout contenedor principal */
-.desktop {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #fff;
-}
-.desktop .div {
-  position: relative;
-  width: 1440px;
-  /* Ajusta la altura según contenido */
-}
-
-/* Botones de registro */
-.botones {
-  position: absolute;
-  top: 526px; /* según Figma */
-  left: 524px;
+/* HEADER */
+.site-header {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  padding: 60px 0;
 }
+
+.site-header .logo {
+  font-family: var(--font-encabezado-h3);
+  font-size: var(--fs-encabezado-h3);
+  font-weight: var(--fw-encabezado-h3);
+  color: var(--gris-medio);
+}
+
+.site-header .title {
+  font-family: 'Lexend', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--gris-oscuro);
+  margin: 0;
+}
+
+.site-header .te-fall-el-artista-a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  color: var(--gris-medio);
+  margin: 0;
+}
+
+/* Registro */
+.registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .frame {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 237px;
-  height: 46px;
-  padding: 10px;
 }
 .text-wrapper {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 16px;
-  color: #666;
-  text-align: center;
+  font-family: var(--font-cuerpo);
+  font-size: var(--fs-cuerpo);
+  color: var(--gris-medio);
 }
+
 .frame-2 {
   display: flex;
   gap: 100px;
 }
+
 .boton-soy-artista,
 .boton-soy-empresa {
   display: flex;
@@ -59,91 +73,49 @@ body {
   gap: 10px;
   padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid #333;
+  border: 1px solid var(--gris-oscuro);
   cursor: pointer;
 }
 .boton-soy-artista {
-  background: #fff;
+  background: var(--blanco);
 }
 .boton-soy-empresa {
-  background: #333;
+  background: var(--gris-oscuro);
 }
 .text-wrapper-2 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 16px;
-  color: #333;
+  font-family: var(--font-cuerpo);
+  font-size: var(--fs-cuerpo);
+  color: var(--gris-oscuro);
 }
 .text-wrapper-3 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 16px;
-  color: #F2F2F2;
-}
-
-/* Encabezados */
-.text-wrapper-4 {
-  position: absolute;
-  top: 49px;
-  left: 50px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #666;
-}
-.p {
-  position: absolute;
-  top: 321px;
-  left: 337px;
-  font-family: 'Lexend', sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  color: #333;
-  text-align: center;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
-}
-.savemyevent-conecta {
-  position: absolute;
-  top: 1518px;
-  left: 279px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #666;
-  text-align: center;
-}
-.te-fall-el-artista-a {
-  position: absolute;
-  top: 125px;
-  left: 436px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 28px;
-  font-weight: 500;
-  color: #666;
-  text-align: center;
+  font-family: var(--font-cuerpo);
+  font-size: var(--fs-cuerpo);
+  color: var(--blanco);
 }
 
 /* Sección Cómo funciona */
 .cmo {
-  position: absolute;
-  top: 723px;
-  left: 0;
-  width: 100%;
-  background: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  gap: 200px;
-  padding: 50px 0;
+  background: var(--gris-muy-claro);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+  padding: 80px 0;
 }
+
 .artista,
 .empresa {
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  width: 491px;
+  gap: 40px;
 }
+
 .div-2,
 .div-3 {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .frame-3,
 .frame-4 {
   display: flex;
@@ -151,39 +123,32 @@ body {
   gap: 20px;
   padding: 10px;
 }
+
 .img {
   width: 30px;
   height: 30px;
 }
+
 .text-wrapper-5 {
-  font-size: 22px;
-  font-weight: 500;
-  color: #333;
+  font-family: var(--font-encabezado-h3);
+  font-size: var(--fs-encabezado-h3);
+  font-weight: var(--fw-encabezado-h3);
+  color: var(--gris-oscuro);
 }
-.div-wrapper,
-.frame-4 {
-  padding: 10px;
-}
+
 .text-wrapper-6 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 16px;
-  color: #666;
-  line-height: 1.4;
+  font-family: var(--font-cuerpo);
+  font-size: var(--fs-cuerpo);
+  color: var(--gris-medio);
+  line-height: var(--lh-cuerpo);
 }
-.filtra {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+/* Pie de página */
+.savemyevent-conecta {
+  text-align: center;
+  padding: 40px 0;
+  font-family: var(--font-encabezado-h3);
+  font-size: var(--fs-encabezado-h3);
+  font-weight: var(--fw-encabezado-h3);
+  color: var(--gris-medio);
 }
-.frame-5 {
-  width: auto;
-  height: auto;
-}
-.busca-artistas-por-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
-```
