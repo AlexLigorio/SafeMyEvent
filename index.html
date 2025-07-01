@@ -3,91 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SaveMyEvent - Landing Page</title>
+  <title>SaveMyEvent – The Show Must Go ON!</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?
+      family=IBM+Plex+Mono:wght@400&
+      family=Sometype+Mono:wght@500;700&
+      display=swap" 
+    rel="stylesheet"
+  />
+
+  <!-- Tu hoja de estilos -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <div class="hero-image"></div>
-
-    <div class="btn btn-artist">Soy artista</div>
-    <div class="btn btn-company">Soy empresa</div>
-
-    <div class="logo">SaveMyEvent</div>
-
-    <div class="headline">
-      La solución instantánea<br />
-      para cubrir tus bajas<br />
-      de última hora
+    <!-- Botones de artista/empresa -->
+    <div 
+      class="btn btn-artist"
+      data-propiedad-1="Predeterminada"
+      style="
+        left: 524px; top: 351px;
+      ">
+      <div class="btn-text">Soy artista</div>
+    </div>
+    <div 
+      class="btn btn-company"
+      data-propiedad-1="Predeterminada"
+      style="
+        left: 770px; top: 351px;
+        background: #333;
+      ">
+      <div class="btn-text btn-text--light">Soy empresa</div>
     </div>
 
-    <div class="subhead">Cómo funciona?</div>
+    <!-- Logo y titulares -->
+    <div class="logo" style="left: 50px; top: 50px;">
+      SaveMyEvent
+    </div>
+    <div class="headline" style="left: 330px; top: 198px;">
+      The Show Must Go ON !
+    </div>
+    <div class="subhead-main" style="left: 436px; top: 76px;">
+      ¿Te falló el artista a última hora?  Encuentra un sustituto en minutos.
+    </div>
+    <div class="subhead-secondary" style="left: 268px; top: 1182px;">
+      SaveMyEvent conecta a empresas con artistas disponibles en tiempo real.
+      Para que tu evento no se cancele, y el show continúe.
+    </div>
 
-   <div class="list-col list-right">
-  <div class="item">
-    <img
-      src="assets/icon-encuentra.svg"
-      alt="Encuentra artistas disponibles"
-      class="icon-wrapper"
-      width="30"
-      height="30"
-    />
-    <div class="item-text">Encuentra artistas disponibles</div>
-  </div>
-  <div class="item">
-    <img
-      src="assets/icon-filtra.svg"
-      alt="Filtra según tus necesidades"
-      class="icon-wrapper"
-      width="30"
-      height="30"
-    />
-    <div class="item-text">Filtra según tus necesidades</div>
-  </div>
-  <div class="item">
-    <img
-      src="assets/icon-contacta.svg"
-      alt="Contacta al instante"
-      class="icon-wrapper"
-      width="30"
-      height="30"
-    />
-    <div class="item-text">Contacta al instante</div>
-  </div>
-</div>
+    <!-- Sección de pasos -->
+    <div 
+      class="steps-section" 
+      style="top: 474px;"
+    >
+      <div class="steps-column">
+        <div class="step">
+          <img src="assets/icon-activa.svg" alt="" class="icon" />
+          <div class="step-title">Actívate</div>
+          <div class="step-desc">
+            Cuando tengas disponibilidad, actívate para aparecer en las búsquedas durante 1 hora
+          </div>
+        </div>
+        <div class="step">
+          <img src="assets/icon-solicitudes.svg" alt="" class="icon" />
+          <div class="step-title">Recibe solicitudes</div>
+          <div class="step-desc">
+            Las empresas podrán contactarte directamente si están interesadas en tu perfil
+          </div>
+        </div>
+        <div class="step">
+          <img src="assets/icon-reputacion.svg" alt="" class="icon" />
+          <div class="step-title">Gana visibilidad y reputación</div>
+          <div class="step-desc">
+            Las empresas podrán contactarte directamente si están interesadas en tu perfil
+          </div>
+        </div>
+      </div>
 
-<div class="list-col list-left">
-  <div class="item">
-    <img
-      src="assets/icon-activa.svg"
-      alt="Actívate"
-      class="icon-wrapper"
-      width="30"
-      height="30"
-    />
-    <div class="item-text">Actívate</div>
+      <div class="steps-column">
+        <div class="step">
+          <img src="assets/icon-encuentra.svg" alt="" class="icon" />
+          <div class="step-title">Encuentra artistas disponibles</div>
+          <div class="step-desc">
+            Accede a un listado de artistas que están activos ahora mismo y disponibles para actuar
+          </div>
+        </div>
+        <div class="step">
+          <img src="assets/icon-filtra.svg" alt="" class="icon" />
+          <div class="step-title">Filtra según tus necesidades</div>
+          <div class="step-desc">
+            Busca artistas por tipo de arte, ciudad, presupuesto o valoración para encontrar el mejor encaje
+          </div>
+        </div>
+        <div class="step">
+          <img src="assets/icon-contacta.svg" alt="" class="icon" />
+          <div class="step-title">Contacta al instante</div>
+          <div class="step-desc">
+            Envía una solicitud directa a los artistas disponibles y habla con ellos por el chat interno
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="item">
-    <img
-      src="assets/icon-solicitudes.svg"
-      alt="Recibe solicitudes"
-      class="icon-wrapper"
-      width="30"
-      height="30"
-    />
-    <div class="item-text">Recibe solicitudes</div>
-  </div>
-  <div class="item">
-    <img
-      src="assets/icon-reputacion.svg"
-      alt="Gana visibilidad y reputación"
-      class="icon-wrapper"
-      width="30"
-      height="30"
-    />
-    <div class="item-text">Gana visibilidad y reputación</div>
-  </div>
-</div>
-
 </body>
 </html>
