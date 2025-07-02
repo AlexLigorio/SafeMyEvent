@@ -1,11 +1,7 @@
-/* style.css - SaveMyEvent Landing Responsive */
-
-/* Import Google Fonts */
+/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Sometype+Mono:wght@500&display=swap');
 
-/* Base Reset & Variables are in globals.css and styleguide.css */
-
-/* Contenedor centrado y fluido */
+/* Wrapper centrado */
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -68,19 +64,14 @@
 .boton-soy-empresa {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid var(--gris-oscuro);
   cursor: pointer;
 }
-.boton-soy-artista {
-  background: var(--blanco);
-}
-.boton-soy-empresa {
-  background: var(--gris-oscuro);
-}
+.boton-soy-artista { background: var(--blanco); }
+.boton-soy-empresa { background: var(--gris-oscuro); }
 .text-wrapper-2 {
   font-family: var(--font-cuerpo);
   font-size: var(--fs-cuerpo);
@@ -106,53 +97,35 @@
   flex-direction: column;
   gap: 40px;
 }
-.div-2,
-.div-3 {
+.item {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.frame-3,
-.frame-4 {
+.icon-title {
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 10px;
 }
-.img {
+.icon {
   width: 30px;
   height: 30px;
 }
-.text-wrapper-5 {
+.item-title {
   font-family: var(--font-encabezado-h3);
   font-size: var(--fs-encabezado-h3);
   font-weight: var(--fw-encabezado-h3);
   color: var(--gris-oscuro);
 }
-.text-wrapper-6 {
+.item-desc {
   font-family: var(--font-cuerpo);
   font-size: var(--fs-cuerpo);
   color: var(--gris-medio);
   line-height: var(--lh-cuerpo);
 }
-.filtra {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.frame-5 {
-  width: auto;
-  height: auto;
-}
-.busca-artistas-por-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
 
-/* Pie de página */
+/* PIE DE PÁGINA */
 .savemyevent-conecta {
   text-align: center;
   padding: 40px 0;
@@ -162,7 +135,7 @@
   color: var(--gris-medio);
 }
 
-/* Media Queries */
+/* BREAKPOINTS */
 @media (min-width: 640px) {
   .cmo { gap: 60px; padding: 100px 0; }
 }
@@ -180,4 +153,3 @@
     padding: 140px 0;
   }
 }
-
