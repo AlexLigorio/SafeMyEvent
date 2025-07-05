@@ -1,0 +1,110 @@
+
+body {
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  background: #FFFFFF;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 30px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 40px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-text {
+  width: 45%;
+}
+
+.left-text h1 {
+  font-size: 100px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 1.1;
+}
+
+.form-section {
+  width: 45%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.user-type {
+  display: flex;
+  gap: 12px;
+}
+
+.type-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #F2F2F2;
+  color: #666666;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 300;
+  border: none;
+  background-color: #F2F2F2;
+  border-radius: 8px;
+  color: #666666;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.submit-btn {
+  padding: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: #333333;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #666666;
+}
+
+.login-text a {
+  font-weight: 700;
+  color: #333333;
+  text-decoration: none;
+}
