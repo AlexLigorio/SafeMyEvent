@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Registro - SaveMyEvent</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="desktop-register">
+      <div class="div">
+        <div class="frame">
+          <form id="registerForm" novalidate>
+            <div class="campos">
+              <!-- Selección de tipo de cuenta -->
+              <div class="selecciona-tipo-de">
+                <div class="div-wrapper"><div class="text-wrapper">Selecciona tipo de cuenta</div></div>
+                <div class="tipo-cuenta">
+                  <div class="div-wrapper-2 perfil-button" id="perfil-artista" onclick="selectPerfil('artista')">
+                    <div class="text-wrapper-2">Soy Artista</div>
+                  </div>
+                  <div class="div-wrapper-2 perfil-button" id="perfil-empresa" onclick="selectPerfil('empresa')">
+                    <div class="text-wrapper-3">Soy Empresa</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nombre -->
+              <div class="div-2">
+                <div class="ttulo"><label class="text-wrapper-4" for="nombre">Nombre</label></div>
+                <div class="para-rellenar">
+                  <input type="text" id="nombre" name="nombre" placeholder="Alex González" required />
+                </div>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="div-2">
+                <div class="ttulo"><label class="text-wrapper-5" for="email">Correo electrónico</label></div>
+                <div class="para-rellenar">
+                  <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+                </div>
+              </div>
+
+              <!-- Contraseña -->
+              <div class="div-2">
+                <div class="ttulo"><label class="text-wrapper-5" for="password">Contraseña</label></div>
+                <div class="para-rellenar-2">
+                  <input type="password" id="password" name="password" required />
+                  <button type="button" class="toggle-visibility" onclick="togglePassword('password')">👁️</button>
+                </div>
+              </div>
+
+              <!-- Repetir contraseña -->
+              <div class="div-2">
+                <div class="ttulo"><label class="text-wrapper-5" for="confirmPassword">Repetir contraseña</label></div>
+                <div class="para-rellenar-2">
+                  <input type="password" id="confirmPassword" name="confirmPassword" required />
+                  <button type="button" class="toggle-visibility" onclick="togglePassword('confirmPassword')">👁️</button>
+                </div>
+              </div>
+
+              <!-- Aceptar términos -->
+              <div class="terminos-y">
+                <input type="checkbox" id="terminos" name="terminos" required />
+                <label for="terminos" class="p">Acepto los términos y condiciones</label>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="CTA">
+              <button type="submit" class="registrarme"><div class="text-wrapper-6">Registrarme</div></button>
+              <div class="inicia-sesin">
+                <div class="div-wrapper-3"><span class="text-wrapper-5">¿Ya tienes una cuenta? </span></div>
+                <div class="div-wrapper-3"><a href="/login" class="text-wrapper-3">Inicia sesión</a></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <p class="text-wrapper-7">Aquí se salvan eventos, no se cancelan</p>
+        <header class="header"><img class="logo" src="img/logo4-1.png" alt="SaveMyEvent logo" /></header>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>
