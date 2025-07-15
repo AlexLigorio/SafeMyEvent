@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveMyEvent</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <!-- Logo SVG -->
+      <img src="logo4 3.svg" alt="SaveMyEvent Logo" height="48">
+    </div>
+    <nav class="nav">
+      <a href="#funciones">Funciones</a>
+      <a href="#porque">¿Porqué SaveMyEvent?</a>
+      <a href="#galeria-artistas">Artistas</a>
+      <a href="#form" class="cta">Unirme a la Beta</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <!-- Overlay del menú móvil -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+      <button class="close-menu" id="close-menu-btn" aria-label="Cerrar menú">&times;</button>
+      <nav class="mobile-menu-links">
+        <a href="#funciones">Funciones</a>
+        <a href="#porque">¿Porqué SaveMyEvent?</a>
+        <a href="#galeria-artistas">Artistas</a>
+        <a href="#form" class="cta">Unirme a la Beta</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1><span>The Show<br>Must Go ON !</span></h1>
+        <h2>Aquí se salvan eventos, no se cancelan</h2>
+      </div>
+      <form id="form" class="register-form" autocomplete="off">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Alex González" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ0-9 ]+">
+          <span class="error-message" id="error-nombre"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="AlexGonzález@..." required>
+          <span class="error-message" id="error-email"></span>
+        </div>
+        <div class="form-group perfil-group">
+          <label>Selecciona tipo de cuenta</label>
+          <div class="perfil-options">
+            <button type="button" class="perfil-btn" id="artista-btn">Soy Artista</button>
+            <button type="button" class="perfil-btn" id="empresa-btn">Soy Empresa</button>
+          </div>
+          <input type="hidden" name="perfil" id="perfil" required>
+          <span class="error-message" id="error-perfil"></span>
+        </div>
+        <button type="submit" class="submit-btn">Quiero unirme a la Beta</button>
+        <div id="spinner-index" class="spinner-cargando" style="display:none;"><div class="loader"></div></div>
+      </form>
+    </section>
+    <section class="beneficios" id="funciones">
+      <div class="beneficio-artistas">
+        <h3>Para artistas</h3>
+        <ul>
+          <li><img src="material-symbols-light_check-box-rounded.svg" alt="Actívate" class="icono"><div class="funcion-texto"><b>Actívate</b><span>Cuando tengas disponibilidad, actívate para aparecer en las búsquedas</span></div></li>
+          <li><img src="heroicons_inbox-arrow-down-20-solid.svg" alt="Recibe solicitudes" class="icono"><div class="funcion-texto"><b>Recibe solicitudes</b><span>Las empresas podrán contactarte directamente si están interesadas en tu perfil</span></div></li>
+          <li><img src="mage_stars-c-fill.svg" alt="Gana visibilidad y reputación" class="icono"><div class="funcion-texto"><b>Gana visibilidad y reputación</b><span>Recibe valoraciones positivas tras actuar para destacar sobre otros perfiles.</span></div></li>
+        </ul>
+      </div>
+      <div class="beneficio-empresas">
+        <h3>Para empresas</h3>
+        <ul>
+          <li><img src="tdesign_search-filled.svg" alt="Encuentra artistas disponibles" class="icono"><div class="funcion-texto"><b>Encuentra artistas disponibles</b><span>Accede a un listado de artistas que están activos ahora mismo y disponibles para actuar</span></div></li>
+          <li><img src="ion_filter.svg" alt="Filtra según tus necesidades" class="icono"><div class="funcion-texto"><b>Filtra según tus necesidades</b><span>Busca artistas por tipo de arte, ciudad, presupuesto o valoración para encontrar el mejor encaje</span></div></li>
+          <li><img src="ph_chat-fill.svg" alt="Contacta al instante" class="icono"><div class="funcion-texto"><b>Contacta al instante</b><span>Envía una solicitud directa a los artistas disponibles y habla con ellos por el chat interno</span></div></li>
+        </ul>
+      </div>
+    </section>
+    <section class="ventajas" id="porque">
+      <h3>¿Por qué usar <b>SaveMyEvent</b>?</h3>
+      <div class="ventajas-lista">
+        <div class="ventaja">
+          <img src="la_user-check.svg" alt="Disponibilidad real" class="icono">
+          <b>Disponibilidad real, no perfiles fantasmas</b>
+          <ul>
+            <li>Solo verás artistas que están realmente disponibles en este momento.</li>
+            <li>A diferencia de otras plataformas donde ves perfiles inactivos o que no responden, aquí el artista se activa manualmente cuando tiene disponibilidad real.</li>
+            <li>Esto ahorra tiempo y evita frustraciones, tanto para la empresa como para el artista.</li>
+          </ul>
+        </div>
+        <div class="ventaja">
+          <img src="lets-icons_flash-light.svg" alt="Soluciona urgencias" class="icono">
+          <b>Soluciona urgencias en minutos</b>
+          <ul>
+            <li>Ideal para cancelaciones de última hora. Encuentra reemplazos de forma inmediata.</li>
+            <li>Este beneficio es emocional: la plataforma salva situaciones críticas en tiempo real.</li>
+            <li>Muchas empresas cancelan eventos porque no tienen a quién acudir. SaveMyEvent es su seguro de emergencia.</li>
+          </ul>
+        </div>
+        <div class="ventaja">
+          <img src="iconoir_bright-star.svg" alt="Artistas visibles según reputación" class="icono">
+          <b>Artistas visibles según su reputación</b>
+          <ul>
+            <li>Las valoraciones públicas dan más visibilidad a quienes mejor actúan.</li>
+            <li>Las empresas pueden confiar más fácilmente en perfiles con buenas reseñas y así reducir el riesgo de contratar a ciegas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Galería de artistas (carrusel) -->
+    <section class="galeria-artistas" id="galeria-artistas">
+      <h2 style="font-family:'Lexend',Arial,sans-serif;font-size:2rem;text-align:center;margin-bottom:32px;">Descubre a los artistas que forman parte de SaveMyEvent</h2>
+      <div class="artistas-carrusel"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="redes">
+      <a href="https://www.instagram.com/savemy.event/" target="_blank" rel="noopener" aria-label="Instagram"><img src="mdi_instagram.svg" alt="Instagram" height="24"></a>
+      <a href="https://www.tiktok.com/@savemy.event" target="_blank" rel="noopener" aria-label="TikTok"><img src="ic_baseline-tiktok.svg" alt="TikTok" height="24"></a>
+    </div>
+    <span>@SaveMyEvent2025</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

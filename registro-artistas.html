@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Artistas | SaveMyEvent</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo4 3.svg" alt="SaveMyEvent Logo" height="48">
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="index.html#funciones">Funciones</a>
+      <a href="index.html#porque">¿Porqué SaveMyEvent?</a>
+      <a href="index.html#galeria-artistas">Artistas</a>
+      <a href="index.html#form" class="cta">Unirme a la Beta</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+      <button class="close-menu" id="close-menu-btn" aria-label="Cerrar menú">&times;</button>
+      <nav class="mobile-menu-links">
+        <a href="index.html#funciones">Funciones</a>
+        <a href="index.html#porque">¿Porqué SaveMyEvent?</a>
+        <a href="index.html#galeria-artistas">Artistas</a>
+        <a href="index.html#form" class="cta">Unirme a la Beta</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" style="justify-content:center;align-items:center;gap:0;">
+      <form id="artista-form" class="register-form" enctype="multipart/form-data" autocomplete="off">
+        <h1 style="font-family:'Lexend',Arial,sans-serif;font-size:2.2rem;text-align:center;margin-bottom:8px;">Mientras trabajamos en la beta..</h1>
+        <h2 style="font-family:'Lexend',Arial,sans-serif;font-size:1.3rem;text-align:center;font-weight:400;margin-bottom:18px;">Que te parece si mostramos tu perfil en nuestra web para que las empresas puedan contactar contigo!</h2>
+        <h1 style="font-family:'Lexend',Arial,sans-serif;font-size:2.1rem;text-align:center;margin-bottom:18px;">The Show Must Go On!</h1>
+          <div class="form-group">
+            <label for="nombre">Nombre artístico</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre artístico" required maxlength="60">
+            <span class="error-message" id="error-nombre"></span>
+          </div>
+          <div class="form-group">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required maxlength="40">
+            <span class="error-message" id="error-ciudad"></span>
+          </div>
+          <div class="form-group">
+            <label for="talento">¿Cuál es tu talento?</label>
+            <input type="text" id="talento" name="talento" placeholder="Ejemplo: Canto, magia, baile..." required maxlength="40">
+            <span class="error-message" id="error-talento"></span>
+          </div>
+          <div class="form-group">
+            <label for="redSocial">Red social principal</label>
+            <input type="url" id="redSocial" name="redSocial" placeholder="https://instagram.com/tuusuario" required maxlength="100">
+            <span class="error-message" id="error-redSocial"></span>
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción breve <span style="font-size:0.9em;color:#888;">(máx. 250 caracteres)</span></label>
+            <textarea id="descripcion" name="descripcion" placeholder="Cuéntanos brevemente sobre ti o tu arte" maxlength="250" required style="resize:none;min-height:60px;"></textarea>
+            <span class="error-message" id="error-descripcion"></span>
+          </div>
+          <div class="form-group">
+            <label for="archivo">Elige tu foto de perfil</label>
+            <input type="file" id="archivo" name="archivo" accept="image/*" required>
+            <span class="error-message" id="error-archivo"></span>
+          </div>
+          <div class="form-group" style="flex-direction:row;align-items:center;gap:10px;">
+            <input type="checkbox" id="consentimiento" name="consentimiento" required>
+            <label for="consentimiento" style="margin-bottom:0;">Consiento la publicación de mi ficha en la galería de SaveMyEvent</label>
+            <span class="error-message" id="error-consentimiento"></span>
+          </div>
+          <button type="submit" class="submit-btn">Enviar perfil</button>
+          <div id="spinner-artista" class="spinner-cargando" style="display:none;"><div class="loader"></div></div>
+          <span class="error-message" id="error-general" style="text-align:center;display:block;"></span>
+        </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="redes">
+      <a href="https://www.instagram.com/savemy.event/" target="_blank" rel="noopener" aria-label="Instagram"><img src="mdi_instagram.svg" alt="Instagram" height="24"></a>
+      <a href="https://www.tiktok.com/@savemy.event" target="_blank" rel="noopener" aria-label="TikTok"><img src="ic_baseline-tiktok.svg" alt="TikTok" height="24"></a>
+    </div>
+    <span>@SaveMyEvent2025</span>
+  </footer>
+  <script>
+    const form = document.getElementById('artista-form');
+    const errorGeneral = document.getElementById('error-general');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      errorGeneral.textContent = '';
+      // Validación básica en frontend
+      let valido = true;
+      if (!form.nombre.value.trim()) {
+        document.getElementById('error-nombre').textContent = 'Campo obligatorio';
+        valido = false;
+      } else {
+        document.getElementById('error-nombre').textContent = '';
+      }
+      if (!form.ciudad.value.trim()) {
+        document.getElementById('error-ciudad').textContent = 'Campo obligatorio';
+        valido = false;
+      } else {
+        document.getElementById('error-ciudad').textContent = '';
+      }
+      if (!form.talento.value.trim()) {
+        document.getElementById('error-talento').textContent = 'Campo obligatorio';
+        valido = false;
+      } else {
+        document.getElementById('error-talento').textContent = '';
+      }
+      if (!form.redSocial.value.trim()) {
+        document.getElementById('error-redSocial').textContent = 'Campo obligatorio';
+        valido = false;
+      } else {
+        document.getElementById('error-redSocial').textContent = '';
+      }
+      if (!form.descripcion.value.trim()) {
+        document.getElementById('error-descripcion').textContent = 'Campo obligatorio';
+        valido = false;
+      } else {
+        document.getElementById('error-descripcion').textContent = '';
+      }
+      if (!form.archivo.files[0]) {
+        document.getElementById('error-archivo').textContent = 'Debes subir una imagen o video';
+        valido = false;
+      } else {
+        document.getElementById('error-archivo').textContent = '';
+      }
+      if (!form.consentimiento.checked) {
+        document.getElementById('error-consentimiento').textContent = 'Debes aceptar el consentimiento';
+        valido = false;
+      } else {
+        document.getElementById('error-consentimiento').textContent = '';
+      }
+      if (!valido) return;
+      // Mostrar spinner
+      document.getElementById('spinner-artista').style.display = 'flex';
+      // Enviar datos al backend
+      const formData = new FormData(form);
+      try {
+        const response = await fetch('https://backendsavemyevent.onrender.com/api/artista', {
+          method: 'POST',
+          body: formData
+        });
+        console.log('Respuesta recibida:', response);
+        if (response.ok) {
+          window.location.href = 'gracias.html';
+        } else {
+          const data = await response.json();
+          console.log('Respuesta error:', data);
+          errorGeneral.textContent = data.error || 'Error al registrar. Intenta de nuevo.';
+          document.getElementById('spinner-artista').style.display = 'none';
+        }
+      } catch (err) {
+        errorGeneral.textContent = 'Error de conexión. Intenta de nuevo.';
+        console.log('Error en fetch:', err);
+        document.getElementById('spinner-artista').style.display = 'none';
+      }
+    });
+
+    // Menú hamburguesa mobile
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    if (hamburgerBtn && mobileMenuOverlay) {
+      hamburgerBtn.addEventListener('click', () => {
+        mobileMenuOverlay.classList.add('show');
+      });
+    }
+    if (closeMenuBtn && mobileMenuOverlay) {
+      closeMenuBtn.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('show');
+      });
+    }
+    if (mobileMenuOverlay) {
+      mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuOverlay.classList.remove('show');
+        });
+      });
+    }
+  </script>
+</body>
+</html> 
