@@ -111,6 +111,32 @@ if (mobileMenuOverlay) {
   });
 }
 
+// Inicialización de FilePond para el input de imagen de perfil
+if (document.getElementById('archivo')) {
+  FilePond.registerPlugin(
+    FilePondPluginImagePreview,
+    FilePondPluginImageCrop,
+    FilePondPluginImageResize,
+    FilePondPluginImageTransform
+  );
+  FilePond.create(document.getElementById('archivo'), {
+    labelIdle: 'Arrastra tu foto o <span class="filepond--label-action">Explora</span>',
+    imagePreviewHeight: 170,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 300,
+    imageResizeTargetHeight: 300,
+    stylePanelAspectRatio: 1,
+    imageTransformOutputQuality: 80,
+    allowImageCrop: true,
+    allowImagePreview: true,
+    allowImageResize: true,
+    allowImageTransform: true,
+    allowMultiple: false,
+    acceptedFileTypes: ['image/*'],
+    maxFiles: 1
+  });
+}
+
 // Galería de artistas dinámica
 async function cargarArtistas() {
   try {
@@ -123,7 +149,7 @@ async function cargarArtistas() {
       return;
     }
     carrusel.innerHTML = artistas.map((artista, idx) => {
-      const descripcionCorta = artista.descripcion && artista.descripcion.length > 120;
+      const descripcionCorta = artista.descripcion && artista.descripcion.length > 60;
       return `
         <div class="tarjeta-artista" data-idx="${idx}">
           <div class="tarjeta-imagen">
